@@ -9,20 +9,11 @@ Recent advances in acquisition and display technologies have led to an enormous 
 Please use the following to refer to this work:
 
 <pre><code>
-@ARTICLE{dsrc, 
-author={M. {Abavisani} and V. M. {Patel}}, 
-journal={IEEE Signal Processing Letters}, 
-title={Deep Sparse Representation-Based Classification}, 
-year={2019}, 
-volume={26}, 
-number={6}, 
-pages={948-952}, 
-doi={10.1109/LSP.2019.2913022}, 
-ISSN={1070-9908}, 
-month={June},}
+@ARTICLE{MB-WNN-SRC, 
+author={Tan-Sy Nguyen, Marie Luong, Mounir Kaaniche, Long H. Ngo, Azeddine Beghdadi}, 
+title={A novel multi-branch wavelet neural network for sparse representation based object classificatio}, 
+year={2022}, 
 </code></pre>
-
-M. Abavisani and V. M. Patel, "Deep Sparse Representation-Based Classification," in IEEE Signal Processing Letters, vol. 26, no. 6, pp. 948-952, June 2019.
 
 
 ## Setup:
