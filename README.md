@@ -18,7 +18,7 @@ year={2022},
 
 ## Setup:
 ### Dependencies:
-Tensorflow, numpy, scipy, random, argparse.
+Torch, numpy, scipy, random, argparse, etc.
 ### Data preprocessing:
 
 Save the data in a `.mat` file that includes verctorized features in a `features_sizexN` matrix with the name `features` and labels in a vector with the name `Label`.
