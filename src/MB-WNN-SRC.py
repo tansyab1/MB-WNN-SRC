@@ -54,46 +54,46 @@ class VAEGT(nn.Module):
 
         # Encoder declaration
         self.encoderLL = nn.Sequential(OrderedDict([
-            ('layer1', nn.Conv2d(in_channels=1, out_channels=8, kernel_size=5, stride=2, padding=(2, 2))),
-            ('relu1', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
-            ('layer2', nn.Conv2d(in_channels=8, out_channels=16, kernel_size=3, stride=2, padding=(1, 1))),
+            ('layer1', nn.Conv2d(in_channels=1, out_channels=10, kernel_size=5, stride=2, padding=(2, 2))),
+            ('relu1', nn.LeakyReLU(negative_slope=negative_slope, inplace=ÌTrue)),
+            ('layer2', nn.Conv2d(in_channels=10, out_channels=20, kernel_size=3, stride=2, padding=(1, 1))),
             ('relu2', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
-            ('layer3', nn.Conv2d(in_channels=16, out_channels=32, kernel_size=3, stride=1, padding=(1, 1))),
+            ('layer3', nn.Conv2d(in_channels=20, out_channels=30, kernel_size=3, stride=1, padding=(1, 1))),
             ('relu3', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
-            ('layer4', nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, stride=1, padding=(1, 1))),
+            ('layer4', nn.Conv2d(in_channels=30, out_channels=30, kernel_size=3, stride=1, padding=(1, 1))),
             ('relu4', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
         ]))
 
         self.encoderLH = nn.Sequential(OrderedDict([
-            ('layer1', nn.Conv2d(in_channels=1, out_channels=8, kernel_size=5, stride=2, padding=(2, 2))),
+            ('layer1', nn.Conv2d(in_channels=1, out_channels=10, kernel_size=5, stride=2, padding=(2, 2))),
             ('relu1', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
-            ('layer2', nn.Conv2d(in_channels=8, out_channels=16, kernel_size=3, stride=2, padding=(1, 1))),
+            ('layer2', nn.Conv2d(in_channels=10, out_channels=20, kernel_size=3, stride=2, padding=(1, 1))),
             ('relu2', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
-            ('layer3', nn.Conv2d(in_channels=16, out_channels=32, kernel_size=3, stride=1, padding=(1, 1))),
+            ('layer3', nn.Conv2d(in_channels=20, out_channels=30, kernel_size=3, stride=1, padding=(1, 1))),
             ('relu3', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
-            ('layer4', nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, stride=1, padding=(1, 1))),
+            ('layer4', nn.Conv2d(in_channels=30, out_channels=30, kernel_size=3, stride=1, padding=(1, 1))),
             ('relu4', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
         ]))
 
         self.encoderHL = nn.Sequential(OrderedDict([
-            ('layer1', nn.Conv2d(in_channels=1, out_channels=8, kernel_size=5, stride=2, padding=(2, 2))),
+            ('layer1', nn.Conv2d(in_channels=1, out_channels=10, kernel_size=5, stride=2, padding=(2, 2))),
             ('relu1', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
-            ('layer2', nn.Conv2d(in_channels=8, out_channels=16, kernel_size=3, stride=2, padding=(1, 1))),
+            ('layer2', nn.Conv2d(in_channels=10, out_channels=20, kernel_size=3, stride=2, padding=(1, 1))),
             ('relu2', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
-            ('layer3', nn.Conv2d(in_channels=16, out_channels=32, kernel_size=3, stride=1, padding=(1, 1))),
+            ('layer3', nn.Conv2d(in_channels=20, out_channels=30, kernel_size=3, stride=1, padding=(1, 1))),
             ('relu3', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
-            ('layer4', nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, stride=1, padding=(1, 1))),
+            ('layer4', nn.Conv2d(in_channels=30, out_channels=30, kernel_size=3, stride=1, padding=(1, 1))),
             ('relu4', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
         ]))
 
         self.encoderHH = nn.Sequential(OrderedDict([
-            ('layer1', nn.Conv2d(in_channels=1, out_channels=8, kernel_size=5, stride=2, padding=(2, 2))),
+            ('layer1', nn.Conv2d(in_channels=1, out_channels=10, kernel_size=5, stride=2, padding=(2, 2))),
             ('relu1', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
-            ('layer2', nn.Conv2d(in_channels=8, out_channels=16, kernel_size=3, stride=2, padding=(1, 1))),
+            ('layer2', nn.Conv2d(in_channels=10, out_channels=20, kernel_size=3, stride=2, padding=(1, 1))),
             ('relu2', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
-            ('layer3', nn.Conv2d(in_channels=16, out_channels=32, kernel_size=3, stride=1, padding=(1, 1))),
+            ('layer3', nn.Conv2d(in_channels=20, out_channels=30, kernel_size=3, stride=1, padding=(1, 1))),
             ('relu3', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
-            ('layer4', nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, stride=1, padding=(1, 1))),
+            ('layer4', nn.Conv2d(in_channels=30, out_channels=30, kernel_size=3, stride=1, padding=(1, 1))),
             ('relu4', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
         ]))
 
@@ -112,41 +112,41 @@ class VAEGT(nn.Module):
 
         # Decoder declaration
         self.decoderLL = nn.Sequential(OrderedDict([
-            ('layer1', nn.ConvTranspose2d(in_channels=32, out_channels=16, kernel_size=3, stride=1, padding=(1, 1))),
+            ('layer1', nn.ConvTranspose2d(in_channels=30, out_channels=20, kernel_size=3, stride=1, padding=(1, 1))),
             ('relu1', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
-            ('layer2', nn.ConvTranspose2d(in_channels=16, out_channels=8, kernel_size=3, stride=2, padding=(1, 1))),
+            ('layer2', nn.ConvTranspose2d(in_channels=20, out_channels=10, kernel_size=3, stride=2, padding=(1, 1))),
             ('relu2', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
-            ('layer3', nn.ConvTranspose2d(in_channels=8, out_channels=1, kernel_size=5, stride=2, padding=(1, 1),
+            ('layer3', nn.ConvTranspose2d(in_channels=10, out_channels=1, kernel_size=5, stride=2, padding=(1, 1),
                                           output_padding=[1, 1])),
             ('relu3', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
         ]))
 
         self.decoderLH = nn.Sequential(OrderedDict([
-            ('layer1', nn.ConvTranspose2d(in_channels=32, out_channels=16, kernel_size=3, stride=1, padding=(1, 1))),
+            ('layer1', nn.ConvTranspose2d(in_channels=30, out_channels=20, kernel_size=3, stride=1, padding=(1, 1))),
             ('relu1', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
-            ('layer2', nn.ConvTranspose2d(in_channels=16, out_channels=8, kernel_size=3, stride=2, padding=(1, 1))),
+            ('layer2', nn.ConvTranspose2d(in_channels=20, out_channels=10, kernel_size=3, stride=2, padding=(1, 1))),
             ('relu2', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
-            ('layer3', nn.ConvTranspose2d(in_channels=8, out_channels=1, kernel_size=5, stride=2, padding=(1, 1),
+            ('layer3', nn.ConvTranspose2d(in_channels=10, out_channels=1, kernel_size=5, stride=2, padding=(1, 1),
                                            output_padding=[1, 1])),
             ('relu3', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
         ]))
 
         self.decoderHL = nn.Sequential(OrderedDict([
-            ('layer1', nn.ConvTranspose2d(in_channels=32, out_channels=16, kernel_size=3, stride=1, padding=(1, 1))),
+            ('layer1', nn.ConvTranspose2d(in_channels=30, out_channels=20, kernel_size=3, stride=1, padding=(1, 1))),
             ('relu1', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
-            ('layer2', nn.ConvTranspose2d(in_channels=16, out_channels=8, kernel_size=3, stride=2, padding=(1, 1))),
+            ('layer2', nn.ConvTranspose2d(in_channels=20, out_channels=10, kernel_size=3, stride=2, padding=(1, 1))),
             ('relu2', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
-            ('layer3', nn.ConvTranspose2d(in_channels=8, out_channels=1, kernel_size=5, stride=2, padding=(1, 1),
+            ('layer3', nn.ConvTranspose2d(in_channels=10, out_channels=1, kernel_size=5, stride=2, padding=(1, 1),
                                           output_padding=[1, 1])),
             ('relu3', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
         ]))
 
         self.decoderHH = nn.Sequential(OrderedDict([
-            ('layer1', nn.ConvTranspose2d(in_channels=32, out_channels=16, kernel_size=3, stride=1, padding=(1, 1))),
+            ('layer1', nn.ConvTranspose2d(in_channels=30, out_channels=20, kernel_size=3, stride=1, padding=(1, 1))),
             ('relu1', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
-            ('layer2', nn.ConvTranspose2d(in_channels=16, out_channels=8, kernel_size=3, stride=2, padding=(1, 1))),
+            ('layer2', nn.ConvTranspose2d(in_channels=20, out_channels=10, kernel_size=3, stride=2, padding=(1, 1))),
             ('relu2', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
-            ('layer3', nn.ConvTranspose2d(in_channels=8, out_channels=1, kernel_size=5, stride=2, padding=(1, 1),
+            ('layer3', nn.ConvTranspose2d(in_channels=10, out_channels=1, kernel_size=5, stride=2, padding=(1, 1),
                                          output_padding=[1, 1])),
             ('relu3', nn.LeakyReLU(negative_slope=negative_slope, inplace=True)),
         ]))
