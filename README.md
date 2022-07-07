@@ -1,4 +1,4 @@
-# Deep sparse representation-based classification
+# A novel multi-branch wavelet neural network for sparse representation based object classification
 ![overview](data/MBarchitecture.pdf)
 
 ## Abstract
@@ -11,7 +11,7 @@ Please use the following to refer to this work:
 <pre><code>
 @ARTICLE{MB-WNN-SRC, 
 author={Tan-Sy Nguyen, Marie Luong, Mounir Kaaniche, Long H. Ngo, Azeddine Beghdadi}, 
-title={A novel multi-branch wavelet neural network for sparse representation based object classificatio}, 
+title={A novel multi-branch wavelet neural network for sparse representation based object classification}, 
 year={2022}, 
 </code></pre>
 
@@ -21,9 +21,9 @@ year={2022},
 Tensorflow, numpy, scipy, random, argparse.
 ### Data preprocessing:
 
-Save the data in a `.mat` file that includes verctorized features in a `1024xN` matrix with the name `features` and labels in a vector with the name `Label`.
+Save the data in a `.mat` file that includes verctorized features in a `features_sizexN` matrix with the name `features` and labels in a vector with the name `Label`.
 
-A sample preprocessed dataset is available in: `data/UMD-AA01.mat` 
+A sample preprocessed dataset is available in: `data/UMD-AA-01.mat` 
 
 ### Note:
 To keep the regularization parameters valid, please make sure that the preprocessing stage is done correctly. Also, for large datasets since the batch size will be larger, the learning rate (or the maximum number of iterations) may need to be adapted accordingly. 
